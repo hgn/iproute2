@@ -1713,11 +1713,11 @@ static void tcp_show_info(const struct nlmsghdr *nlh, struct inet_diag_msg *r,
 				= RTA_DATA(tb[INET_DIAG_DCTCPINFO]);
 
 			if (dinfo->dctcp_enabled) {
-				printf(" ce_state %u alpha %u ab_ecn %u ab_tot %u",
+				printf("dctcp:(ce_state:%u,alpha:%u,ab_ecn:%u,ab_tot:%u)",
 				       dinfo->dctcp_ce_state, dinfo->dctcp_alpha,
 				       dinfo->dctcp_ab_ecn, dinfo->dctcp_ab_tot);
 			} else {
-				printf(" fallback_mode");
+				printf("dctcp:fallback_mode");
 			}
 		}
 
